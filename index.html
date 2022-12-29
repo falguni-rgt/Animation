@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @keyframes sliding{
+            from{
+                background-color: yellow;
+                left: 0;
+                top:0;
+                transform: scale(0.5);
+            }
+            20%{
+                background-color: brown;
+                top: 140px;
+            }
+            50%{
+                background-color: red;
+                top: 0px;
+                transform: scale(1);
+            }
+
+            60%{
+                background-color:rgb(178, 220, 29) ;
+                top: 140px;
+            }
+            to{
+                background-color: black;
+                left: 340px;
+                top: 0;
+                transform: scale(0.5);
+            }
+        }
+
+        .stage{
+            width: 400px;
+            height: 200px;
+            background-color: rgb(134, 200, 211);   
+    }
+
+    .ball{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: red;
+        animation: sliding 
+        1s ease-in-out
+         infinite alternate;
+        animation-play-state: running;
+        position: relative;
+    }
+    </style>
+</head>
+<body>
+    <h1> This is Dancing area</h1>
+    <div class="stage">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
